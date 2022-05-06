@@ -18,8 +18,7 @@ public class CurrencyServiceImpl implements CurrencyService {
         return webClientService.getCurrency(currencyCode);
     }
 
-    private boolean isCurrencyCodeValid(String code) {
-        AvailableCurrencyCodes codes;
+    protected boolean isCurrencyCodeValid(String code) {
         for (AvailableCurrencyCodes c : AvailableCurrencyCodes.values()) {
             if (c.name().equals(code)) {
                 return true;
@@ -28,7 +27,7 @@ public class CurrencyServiceImpl implements CurrencyService {
         return false;
     }
 
-    private void validateCurrencyCode(String currencyCode) {
+    protected void validateCurrencyCode(String currencyCode) {
         if (!isCurrencyCodeValid(currencyCode)) {
             throw new CurrencyException(CurrencyError.CURRENCY_NOT_FOUND);
         }
