@@ -7,12 +7,12 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @RequiredArgsConstructor
-public class WebClientServiceImpl implements WebClientService{
+public class WebClientServiceImpl implements WebClientService {
     private final RestTemplate restTemplate;
     private final String NBP_API_URL = "https://api.nbp.pl/api/exchangerates/rates/c/";
 
     @Override
     public Currency getCurrency(String currencyCode) {
-        return restTemplate.getForObject(NBP_API_URL + currencyCode + "/",Currency.class);
+        return restTemplate.getForObject(NBP_API_URL + currencyCode + "/", Currency.class);
     }
 }
