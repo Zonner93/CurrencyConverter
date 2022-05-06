@@ -1,0 +1,1 @@
+The app provides a service of converting one currency to another based on the current exchange rates
