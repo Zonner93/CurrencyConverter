@@ -1,6 +1,6 @@
 package com.zonner93.controller;
 
-import com.zonner93.model.Currency;
+import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.service.web_client.CurrencyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class CurrencyController {
     private final CurrencyService currencyService;
 
     @GetMapping(value = "/")
-    public Currency getCurrency(@RequestParam String currencyCode){
+    public CurrencyDto getCurrency(@RequestParam String currencyCode) {
         return currencyService.getCurrency(currencyCode);
     }
 }
