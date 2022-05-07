@@ -15,8 +15,13 @@ public class WebClientServiceImpl implements WebClientService {
     private final String NBP_API_URL = "https://api.nbp.pl/api/exchangerates/rates/c/";
 
     @Override
-    public CurrencyDto getCurrency(String currencyCode) {
+    public CurrencyDto getCurrencyDto(String currencyCode) {
         Currency currency = restTemplate.getForObject(NBP_API_URL + currencyCode + "/", Currency.class);
         return currencyMapper.currencyToDto(currency);
+    }
+
+    @Override
+    public Currency getCurrency(String currencyCode) {
+        return restTemplate.getForObject(NBP_API_URL + currencyCode + "/", Currency.class);
     }
 }

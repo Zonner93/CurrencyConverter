@@ -1,4 +1,4 @@
-package com.zonner93.service.Currency;
+package com.zonner93.service.currency;
 
 import com.zonner93.Exception.Currency.CurrencyError;
 import com.zonner93.Exception.Currency.CurrencyException;
@@ -19,7 +19,7 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Override
     public CurrencyDto getCurrency(String currencyCode) {
         validateCurrencyCode(currencyCode);
-        return webClientService.getCurrency(currencyCode);
+        return webClientService.getCurrencyDto(currencyCode);
     }
 
     @Override

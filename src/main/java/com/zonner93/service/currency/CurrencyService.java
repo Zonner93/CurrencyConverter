@@ -1,4 +1,4 @@
-package com.zonner93.service.Currency;
+package com.zonner93.service.currency;
 
 import com.zonner93.model.dto.CurrencyDto;
 
