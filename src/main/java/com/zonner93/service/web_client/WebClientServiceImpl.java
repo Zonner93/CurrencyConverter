@@ -3,7 +3,6 @@ package com.zonner93.service.web_client;
 import com.zonner93.model.Currency;
 import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.model.mapper.CurrencyMapper;
-import com.zonner93.service.web_client.WebClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
