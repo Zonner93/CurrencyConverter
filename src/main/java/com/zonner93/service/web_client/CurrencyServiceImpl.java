@@ -3,10 +3,12 @@ package com.zonner93.service.web_client;
 import com.zonner93.Exception.Currency.CurrencyError;
 import com.zonner93.Exception.Currency.CurrencyException;
 import com.zonner93.constans.AvailableCurrencyCodes;
-import com.zonner93.model.Currency;
 import com.zonner93.model.dto.CurrencyDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +19,16 @@ public class CurrencyServiceImpl implements CurrencyService {
     public CurrencyDto getCurrency(String currencyCode) {
         validateCurrencyCode(currencyCode);
         return webClientService.getCurrency(currencyCode);
+    }
+
+    @Override
+    public List<CurrencyDto> getCurrencyList(List<String> currencyCodeList) {
+        List<CurrencyDto> currencyDtoList = new ArrayList<>();
+        for (String code : currencyCodeList) {
+            CurrencyDto currency = getCurrency(code);
+            currencyDtoList.add(currency);
+        }
+        return currencyDtoList;
     }
 
     protected boolean isCurrencyCodeValid(String code) {

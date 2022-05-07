@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/currency")
 @RequiredArgsConstructor
@@ -17,5 +19,10 @@ public class CurrencyController {
     @GetMapping(value = "/")
     public CurrencyDto getCurrency(@RequestParam String currencyCode) {
         return currencyService.getCurrency(currencyCode);
+    }
+
+    @GetMapping("/list")
+    public List<CurrencyDto> getCurrencyList(@RequestParam List<String> currencyCodeList) {
+        return currencyService.getCurrencyList(currencyCodeList);
     }
 }
