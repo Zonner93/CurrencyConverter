@@ -1,4 +1,6 @@
-package com.zonner93.model;
+package com.zonner93.model.builder;
+
+import com.zonner93.model.dto.CurrencyDto;
 
 public class CurrencyDtoBuilder {
     private String currency;

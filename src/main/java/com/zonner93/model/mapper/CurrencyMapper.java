@@ -1,5 +1,8 @@
-package com.zonner93.model;
+package com.zonner93.model.mapper;
 
+import com.zonner93.model.Currency;
+import com.zonner93.model.builder.CurrencyDtoBuilder;
+import com.zonner93.model.dto.CurrencyDto;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package com.zonner93.model;
+package com.zonner93.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
