@@ -1,9 +1,10 @@
-package com.zonner93.service.web_client;
+package com.zonner93.service.Currency;
 
 import com.zonner93.Exception.Currency.CurrencyError;
 import com.zonner93.Exception.Currency.CurrencyException;
 import com.zonner93.constans.AvailableCurrencyCodes;
 import com.zonner93.model.dto.CurrencyDto;
+import com.zonner93.service.web_client.WebClientServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

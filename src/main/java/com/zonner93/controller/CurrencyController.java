@@ -1,7 +1,7 @@
 package com.zonner93.controller;
 
 import com.zonner93.model.dto.CurrencyDto;
-import com.zonner93.service.web_client.CurrencyService;
+import com.zonner93.service.Currency.CurrencyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

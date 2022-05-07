@@ -1,4 +1,4 @@
-package com.zonner93.service.web_client;
+package com.zonner93.service.Currency;
 
 import com.zonner93.model.dto.CurrencyDto;
 
