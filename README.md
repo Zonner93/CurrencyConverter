@@ -111,9 +111,9 @@ curl -X GET http://localhost:8080/api/currency/available
 ```
 ---
 #### GET */api/currency/convert{quantity}&{currencyCodeFrom}&{currencyCodeTo}*
-#### *{quantity}* - the amount of currency we want to convert.
-#### *{currencyCodeFrom}* - the currency we want to convert.
-#### *{currencyCodeTo}* - the currency we want to convert to.
+#### *{quantity}* - the amount of currency want to convert.
+#### *{currencyCodeFrom}* - the currency want to convert.
+#### *{currencyCodeTo}* - the currency want to convert to.
 #### example curl:
 ```
 curl -X GET -F 'quantity=100' -F 'currencyCodeFrom=gbp' -F 'currencyCodeTo=jpy' http://localhost:8080/api/currency/convert
