@@ -33,7 +33,7 @@ docker-compose up
 ---
 ### Enpoints:
 ---
-#### */api/currency/{currencyCode}*
+#### GET */api/currency/{currencyCode}*
 #### *{currencyCode}* - request parameter (*usd, aud, cad, eur, huf, chf, gbp, jpy, czk, dkk, nok, sek, xdr*).
 #### example curl:
 ```
@@ -50,7 +50,7 @@ curl -X GET -F 'currencyCode=eur' http://localhost:8080/api/currency/
 }
 ```
 ---
-#### */api/currency/list{currencyCodeList}*
+#### GET */api/currency/list{currencyCodeList}*
 #### *{currencyCodeList}* - request parameter, list of currency codes.
 #### example curl:
 ```
@@ -83,7 +83,7 @@ curl -X GET -F 'currencyCodeList=eur,gbp,czk' http://localhost:8080/api/currency
 ]
 ```
 ---
-#### */api/currency/list/available*
+#### GET */api/currency/list/available*
 #### Returns list of available currency codes.
 #### example curl:
 ```
@@ -110,7 +110,7 @@ curl -X GET http://localhost:8080/api/currency/available
 }
 ```
 ---
-#### */api/currency/convert{quantity}&{currencyCodeFrom}&{currencyCodeTo}*
+#### GET */api/currency/convert{quantity}&{currencyCodeFrom}&{currencyCodeTo}*
 #### *{quantity}* - the amount of currency we want to convert.
 #### *{currencyCodeFrom}* - the currency we want to convert.
 #### *{currencyCodeTo}* - the currency we want to convert to.
@@ -131,7 +131,7 @@ curl -X GET -F 'quantity=100' -F 'currencyCodeFrom=gbp' -F 'currencyCodeTo=jpy' 
 }
 ```
 ---
-#### */api/currency/history*
+#### GET */api/currency/history*
 #### Returns a history of all conversions.
 #### example curl:
 ```
