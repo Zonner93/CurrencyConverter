@@ -11,7 +11,7 @@ cd CurrencyConverter
 ```
 #### Build jar file.
 ```
-./mvnw clean package
+./mvnw clean compile package
 ```
 #### Build docker image with name currency-converter.
 ```
