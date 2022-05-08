@@ -1,5 +1,7 @@
 package com.zonner93.controller;
 
+import com.zonner93.constants.AvailableCurrencyCodes;
+import com.zonner93.model.AvailableCurrency;
 import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.model.dto.LogDto;
 import com.zonner93.service.currency.CurrencyService;
@@ -27,6 +29,11 @@ public class CurrencyController {
     @GetMapping("/list")
     public List<CurrencyDto> getCurrencyList(@RequestParam List<String> currencyCodeList) {
         return currencyService.getCurrencyList(currencyCodeList);
+    }
+
+    @GetMapping("/available")
+    public AvailableCurrency getAvailableCurrency() {
+        return currencyService.getAvailableCurrency();
     }
 
     @GetMapping("/convert")

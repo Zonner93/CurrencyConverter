@@ -3,6 +3,7 @@ package com.zonner93.service.currency;
 import com.zonner93.Exception.Currency.CurrencyError;
 import com.zonner93.Exception.Currency.CurrencyException;
 import com.zonner93.constants.AvailableCurrencyCodes;
+import com.zonner93.model.AvailableCurrency;
 import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.service.web_client.WebClientServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +31,16 @@ public class CurrencyServiceImpl implements CurrencyService {
             currencyDtoList.add(currency);
         }
         return currencyDtoList;
+    }
+
+    @Override
+    public AvailableCurrency getAvailableCurrency() {
+        AvailableCurrency availableCurrency = new AvailableCurrency();
+        List<String> currencyCodeList = availableCurrency.getCurrencyCodeList();
+        for (AvailableCurrencyCodes c : AvailableCurrencyCodes.values()) {
+            currencyCodeList.add(c.name());
+        }
+        return availableCurrency;
     }
 
     protected boolean isCurrencyCodeValid(String code) {
