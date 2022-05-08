@@ -1,17 +1,17 @@
 ### The app provides a service of converting one currency to another based on the current exchange rates using http://api.nbp.pl/
 ---
 ### Description of response parameters for currency exchange rates:
-#### currency - name of currency.
-#### code - currency code.
-#### effectiveDate - publication date.
-#### bid - currency buying rate.
-#### ask - currency selling rate.
-#### result - calculated amount of the new currency.
+#### *currency* - name of currency.
+#### *code* - currency code.
+#### *effectiveDate* - publication date.
+#### *bid* - currency buying rate.
+#### *ask* - currency selling rate.
+#### *result* - calculated amount of the new currency.
 ---
 ### Enpoints:
 ---
 #### */api/currency/{currencyCode}*
-#### *{currencyCode}* - request parameter (usd, aud, cad, eur, huf, chf, gbp, jpy, czk, dkk, nok, sek, xdr).
+#### *{currencyCode}* - request parameter (*usd, aud, cad, eur, huf, chf, gbp, jpy, czk, dkk, nok, sek, xdr*).
 #### example curl:
 ```
 curl -X GET -F 'currencyCode=eur' http://localhost:8080/api/currency/
