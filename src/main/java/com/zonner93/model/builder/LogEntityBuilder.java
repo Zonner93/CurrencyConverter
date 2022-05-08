@@ -1,6 +1,6 @@
 package com.zonner93.model.builder;
 
-import com.zonner93.model.LogEntity;
+import com.zonner93.model.entity.LogEntity;
 
 public class LogEntityBuilder {
     private String date;

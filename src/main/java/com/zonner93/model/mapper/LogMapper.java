@@ -1,6 +1,6 @@
 package com.zonner93.model.mapper;
 
-import com.zonner93.model.LogEntity;
+import com.zonner93.model.entity.LogEntity;
 import com.zonner93.model.builder.LogDtoBuilder;
 import com.zonner93.model.builder.LogEntityBuilder;
 import com.zonner93.model.dto.LogDto;

@@ -1,4 +1,4 @@
-package com.zonner93.model;
+package com.zonner93.model.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.zonner93.constans;
+package com.zonner93.constants;
 
 public enum AvailableCurrencyCodes {
     usd,
