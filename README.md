@@ -1,5 +1,24 @@
 ### The app provides a service of converting one currency to another based on the current exchange rates using http://api.nbp.pl/
 ---
+### Instalation guide using bit bash:
+#### Clone the repository.
+```
+git clone https://github.com/Zonner93/CurrencyConverter.git
+```
+#### Go inside application root directory.
+```
+cd CurrencyConverter
+```
+#### Build docker image with name currency-converter.
+```
+docker build -t currency-converter .
+```
+#### Run docker compose.
+```
+docker-compose up
+
+```
+---
 ### Description of response parameters for currency exchange rates:
 #### *currency* - name of currency.
 #### *code* - currency code.
