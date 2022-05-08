@@ -9,6 +9,10 @@ git clone https://github.com/Zonner93/CurrencyConverter.git
 ```
 cd CurrencyConverter
 ```
+#### Build jar file.
+```
+./mvnw clean package
+```
 #### Build docker image with name currency-converter.
 ```
 docker build -t currency-converter .
