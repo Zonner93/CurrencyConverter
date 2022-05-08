@@ -35,4 +35,9 @@ public class CurrencyController {
                                   @RequestParam String currencyCodeTo) {
         return logService.convertCurrency(quantity, currencyCodeFrom, currencyCodeTo);
     }
+
+    @GetMapping("/history")
+    public List<LogDto> getAllLogs() {
+        return logService.getAllLogs();
+    }
 }

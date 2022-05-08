@@ -3,6 +3,7 @@ package com.zonner93.service.log;
 import com.zonner93.Exception.LogException.LogError;
 import com.zonner93.Exception.LogException.LogException;
 import com.zonner93.model.Currency;
+import com.zonner93.model.LogEntity;
 import com.zonner93.model.dto.LogDto;
 import com.zonner93.model.mapper.LogMapper;
 import com.zonner93.model.repository.LogRepository;
@@ -11,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -42,6 +45,11 @@ public class LogServiceImpl implements LogService {
         return logDto;
     }
 
+    @Override
+    public List<LogDto> getAllLogs() {
+        return toDtoList(logRepository.findAll());
+    }
+
     protected double convertForeignCurrencyToPLN(double quantity, double currencyBid) {
         return quantity * currencyBid;
     }
@@ -55,9 +63,18 @@ public class LogServiceImpl implements LogService {
             throw new LogException(LogError.QUANTITY_LESS_OR_EQUALS_ZERO);
         }
     }
+
     protected void validateCurrencyCodesDifference(String currencyCodeFrom, String currencyCodeTo) {
         if (currencyCodeFrom.equals(currencyCodeTo)) {
             throw new LogException(LogError.THE_SAME_CURRENCY_FROM_AND_CURRENCY_TO);
         }
+    }
+
+    protected List<LogDto> toDtoList(List<LogEntity> logEntityList) {
+        List<LogDto> logDtoList = new ArrayList<>();
+        for (LogEntity logEntity : logEntityList) {
+            logDtoList.add(logMapper.entityToDto(logEntity));
+        }
+        return logDtoList;
     }
 }
