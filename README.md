@@ -1,6 +1,6 @@
 ### The app provides a service of converting one currency to another based on the current exchange rates using http://api.nbp.pl/
 ---
-### Instalation guide using bit bash:
+### Instalation guide using git bash:
 #### Clone the repository.
 ```
 git clone https://github.com/Zonner93/CurrencyConverter.git
