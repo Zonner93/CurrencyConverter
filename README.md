@@ -13,11 +13,7 @@ cd CurrencyConverter
 ```
 ./mvnw clean compile package
 ```
-#### 4. Build docker image with name currency-converter.
-```
-docker build -t currency-converter .
-```
-#### 5. Run docker compose.
+#### 4. Run docker compose.
 ```
 docker-compose up
 ```
