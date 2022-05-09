@@ -3,6 +3,7 @@ package com.zonner93.service.log;
 import com.zonner93.Exception.LogException.LogError;
 import com.zonner93.Exception.LogException.LogException;
 import com.zonner93.model.Currency;
+import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.model.entity.LogEntity;
 import com.zonner93.model.dto.LogDto;
 import com.zonner93.model.mapper.LogMapper;
@@ -29,8 +30,8 @@ public class LogServiceImpl implements LogService {
 
         Currency currencyFrom = webClientService.getCurrency(currencyCodeFrom);
         Currency currencyTo = webClientService.getCurrency(currencyCodeTo);
+
         LogDto logDto = new LogDto();
-        logDto.setCurrencyFrom(currencyCodeFrom);
         logDto.setCodeTo(currencyCodeTo);
         logDto.setCodeFrom(currencyCodeFrom);
         logDto.setDate(LocalDateTime.now().toString());
