@@ -1,6 +1,5 @@
 package com.zonner93.controller;
 
-import com.zonner93.constants.AvailableCurrencyCodes;
 import com.zonner93.model.AvailableCurrency;
 import com.zonner93.model.dto.CurrencyDto;
 import com.zonner93.model.dto.LogDto;

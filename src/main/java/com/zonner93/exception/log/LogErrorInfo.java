@@ -1,10 +1,10 @@
-package com.zonner93.Exception.Currency;
+package com.zonner93.exception.log;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class CurrencyErrorInfo {
+public class LogErrorInfo {
     private final String message;
 }

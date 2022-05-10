@@ -15,5 +15,4 @@ public class Currency implements Serializable {
     private String currency;
     private String code;
     private List<Rates> rates;
-
 }

@@ -1,4 +1,4 @@
-package com.zonner93.Exception.LogException;
+package com.zonner93.exception.log;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

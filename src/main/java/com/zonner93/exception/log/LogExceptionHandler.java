@@ -1,4 +1,4 @@
-package com.zonner93.Exception.LogException;
+package com.zonner93.exception.log;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,5 +16,4 @@ public class LogExceptionHandler {
         }
         return ResponseEntity.status(httpStatus).body(new LogErrorInfo(e.getLogError().getMessage()));
     }
-
 }

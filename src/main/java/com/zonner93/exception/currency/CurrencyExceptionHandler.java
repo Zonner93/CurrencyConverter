@@ -1,4 +1,4 @@
-package com.zonner93.Exception.Currency;
+package com.zonner93.exception.currency;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

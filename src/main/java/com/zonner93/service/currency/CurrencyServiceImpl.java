@@ -1,7 +1,7 @@
 package com.zonner93.service.currency;
 
-import com.zonner93.Exception.Currency.CurrencyError;
-import com.zonner93.Exception.Currency.CurrencyException;
+import com.zonner93.exception.currency.CurrencyError;
+import com.zonner93.exception.currency.CurrencyException;
 import com.zonner93.constants.AvailableCurrencyCodes;
 import com.zonner93.model.AvailableCurrency;
 import com.zonner93.model.dto.CurrencyDto;

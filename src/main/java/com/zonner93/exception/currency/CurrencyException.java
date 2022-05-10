@@ -1,4 +1,4 @@
-package com.zonner93.Exception.Currency;
+package com.zonner93.exception.currency;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

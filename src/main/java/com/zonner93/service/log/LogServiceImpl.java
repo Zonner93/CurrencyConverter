@@ -1,11 +1,10 @@
 package com.zonner93.service.log;
 
-import com.zonner93.Exception.LogException.LogError;
-import com.zonner93.Exception.LogException.LogException;
+import com.zonner93.exception.log.LogError;
+import com.zonner93.exception.log.LogException;
 import com.zonner93.model.Currency;
-import com.zonner93.model.dto.CurrencyDto;
-import com.zonner93.model.entity.LogEntity;
 import com.zonner93.model.dto.LogDto;
+import com.zonner93.model.entity.LogEntity;
 import com.zonner93.model.mapper.LogMapper;
 import com.zonner93.model.repository.LogRepository;
 import com.zonner93.service.web_client.WebClientServiceImpl;
