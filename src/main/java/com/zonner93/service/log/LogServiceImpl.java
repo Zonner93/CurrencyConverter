@@ -39,6 +39,7 @@ public class LogServiceImpl implements LogService {
         logDto.setCurrencyTo(currencyTo.getCurrency());
         double quantityPLN = convertForeignCurrencyToPLN(quantity, currencyFrom.getRates().get(0).getBid());
         double quantityNewCurrency = convertPLNToForeignCurrency(quantityPLN, currencyTo.getRates().get(0).getAsk());
+        quantityNewCurrency =roundDouble(quantityNewCurrency, 2);
         logDto.setResult(quantityNewCurrency);
 
         logRepository.save(logMapper.dtoToEntity(logDto));
@@ -76,5 +77,10 @@ public class LogServiceImpl implements LogService {
             logDtoList.add(logMapper.entityToDto(logEntity));
         }
         return logDtoList;
+    }
+
+    protected double roundDouble(double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
     }
 }
