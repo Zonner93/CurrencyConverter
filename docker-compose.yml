@@ -11,9 +11,9 @@ services:
     restart: always
   currency-app:
     container_name: currency-converter
-    image: 'currency-converter'
-    build:
-      context: ./Docker/Dockerfile
+    image: 'zonnerdocker93/currency-app'
+#    build:
+#      context: .
     ports:
       - "8080:8080"
     environment:
