@@ -122,7 +122,7 @@ curl -X GET -F 'quantity=100' -F 'currencyCodeFrom=gbp' -F 'currencyCodeTo=jpy' 
     "currencyTo": "jen (Japonia)",
     "codeFrom": "gbp",
     "codeTo": "jpy",
-    "result": 15812.926065712865
+    "result": 15812.92
 }
 ```
 ---
@@ -142,7 +142,7 @@ curl -X GET 'currencyCodeTo=jpy' http://localhost:8080/api/currency/history
         "currencyTo": "funt szterling",
         "codeFrom": "usd",
         "codeTo": "gbp",
-        "result": 79.13817805908704
+        "result": 79.13
     },
     {
         "date": "2022-05-07T14:10:46.441851",
@@ -151,7 +151,7 @@ curl -X GET 'currencyCodeTo=jpy' http://localhost:8080/api/currency/history
         "currencyTo": "dolar amerykański",
         "codeFrom": "gbp",
         "codeTo": "usd",
-        "result": 121.40482501460083
+        "result": 121.40
     }, ...
 
 ]
